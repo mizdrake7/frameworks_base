@@ -1229,13 +1229,6 @@ public final class NotificationPanelViewController implements Dumpable {
         mKeyguardStatusViewController.init();
         updateClockAppearance();
 
-        mKeyguardStatusBarViewController =
-                mKeyguardStatusBarViewComponentFactory.build(
-                        mKeyguardStatusBar,
-                        mNotificationPanelViewStateProvider)
-                        .getKeyguardStatusBarViewController();
-        mKeyguardStatusBarViewController.init();
-
         if (mKeyguardUserSwitcherController != null) {
             // Try to close the switcher so that callbacks are triggered if necessary.
             // Otherwise, NPV can get into a state where some of the views are still hidden
